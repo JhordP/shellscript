@@ -8,7 +8,8 @@ bin-release/
 .settings/
 
 #All Vagrant Files
-*agrant*
+*Vagrantfile
+.vagrant/
 
 # Executables
 *.swf
