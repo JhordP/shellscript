@@ -1,35 +1,44 @@
 #!/bin/bash
 
-# This script tisplays various information to the screen
+# This script displays various information to the screen.
 
-# Display "Hello"
-echo "Hello";
-###
 
-#Assign a value to a variable
-WORD="script";
+# Display 'Hello'
+echo 'Hello'
 
-#Display that value using the variable.
-echo "$WORD";
-echo '$WORD'; #If you use ONE quotation mark instead of 2, it will not use the variable.
+# Assign a value to a variable.
+WORD='script'
 
-#Use the variable with simple text combined.
-echo "This is a shell $WORD";
+# Display that value using the variable.
+echo "$WORD"
 
-#Displays the contects of the variable using an alternative syntax.
-echo "This is a shell ${WORD} with alt. syntax";
+# Demonstrate that single quotes cause variables to not get expanded.
+echo '$WORD'
 
-#To append text right after the var without spaces you have to use the alt. syntax.
-echo "Shell ${WORD}ing"; #without it the var name would be WORDing.
-###
+# Combine the variable with hard-coded text.
+echo "This is a shell $WORD"
 
-#Lets create another var.
-ENDING='ed';
+# Display the contents of the variable using an alternative syntax.
+echo "This is a shell ${WORD}"
 
-#Combile the two variables.
-echo "This is ${WORD}${ENDING}";
+# Append text to the variable.
+echo "${WORD}ing is fun!"
 
-#Reassign a var:
-ENDING='ing';
-echo "This is ${WORD}${ENDING}";
-#Hello, from the main OS.
+# Show how NOT to append text to a variable.
+# This doesn't work:
+echo "$WORDing is fun!"
+
+# Create a new variable
+ENDING='ed'
+
+# Combine the two variables.
+echo "This is ${WORD}${ENDING}."
+
+# Change the value stored in the ENDING variable.  (Reassignment.)
+ENDING='ing'
+echo "${WORD}${ENDING} is fun!"
+
+# Reassign value to ENDING.
+ENDING='s'
+echo "You are going to write many ${WORD}${ENDING} in this class!"
+
